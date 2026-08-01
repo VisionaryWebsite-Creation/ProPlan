@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auren — See more clearly.</title>
+<meta name="description" content="Auren. A smartphone built around light, clarity, and quiet precision.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--
+  ============================================================
+  NAVBAR (Part 2)
+  Floating, scroll-aware. Aperture mark = wordmark icon, reused
+  again in Part 4 (hero) and Part 9 (footer close) — keep the
+  <symbol id="aperture"> markup identical in every part so all
+  three instances stay visually in sync.
+  ============================================================
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="aperture" viewBox="0 0 64 64">
+    <g fill="currentColor">
+      <path d="M32 32 L50 15 A9 9 0 0 1 58 23 Z"/>
+      <path d="M32 32 L49 44 A9 9 0 0 1 45 52 Z" transform="rotate(60 32 32)"/>
+      <path d="M32 32 L49 44 A9 9 0 0 1 45 52 Z" transform="rotate(120 32 32)"/>
+      <path d="M32 32 L49 44 A9 9 0 0 1 45 52 Z" transform="rotate(180 32 32)"/>
+      <path d="M32 32 L49 44 A9 9 0 0 1 45 52 Z" transform="rotate(240 32 32)"/>
+      <path d="M32 32 L49 44 A9 9 0 0 1 45 52 Z" transform="rotate(300 32 32)"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+
+    <a href="#top" class="nav__logo" aria-label="Auren — home">
+      <svg class="nav__mark" width="28" height="28" aria-hidden="true"><use href="#aperture"/></svg>
+      <span class="nav__wordmark">Auren</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#cta">Pre-order</a></li>
+      </ul>
+    </nav>
+
+    <a href="#cta" class="btn btn-primary nav__cta">Pre-order</a>
+
+    <button
+      class="nav__toggle"
+      id="navToggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#specs">Specs</a></li>
+      <li><a href="#cta">Pre-order</a></li>
+    </ul>
+    <a href="#cta" class="btn btn-primary">Pre-order</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero__inner">
+
+      <div class="hero__copy">
+        <p class="eyebrow">Introducing Auren</p>
+        <h1 class="hero__headline">Light,<br>unclouded.</h1>
+        <p class="hero__subhead">
+          A six-element lens system and on-device processing built for one
+          job: images that look like what you actually saw, not what an
+          algorithm guessed you wanted.
+        </p>
+        <div class="hero__actions">
+          <a href="#cta" class="btn btn-primary">Pre-order — $999</a>
+          <a href="#specs" class="btn btn-ghost">View specs</a>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <svg class="hero__aperture-mark" viewBox="0 0 64 64"><use href="#aperture"/></svg>
+        <span class="hero__tag hero__tag--fstop">ƒ/1.4</span>
+        <span class="hero__tag hero__tag--res">48MP</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!--
+    TEMPORARY PLACEHOLDER (delete in Part 5)
+    Marks where the Features section lands next. Kept tiny and
+    unstyled-looking on purpose so it doesn't get mistaken for a
+    finished part.
+  -->
+  <section id="features" class="features section section--alt">
+    <div class="container">
+      <p class="eyebrow">Built for clarity</p>
+      <h2>Every part reconsidered.</h2>
+      <p class="features__intro">
+        Four systems, one goal: nothing between what's in front of the
+        lens and what ends up on screen.
+      </p>
+
+      <div class="features__grid">
+
+        <article class="feature-card">
+          <p class="feature-card__label">Optics</p>
+          <h3>A six-element lens, tuned by hand</h3>
+          <p>Every element is calibrated individually before assembly, not
+            corrected in software after the fact — so color and geometry
+            are right at the source.</p>
+        </article>
+
+        <article class="feature-card">
+          <p class="feature-card__label">Silicon</p>
+          <h3>Processing that stays on-device</h3>
+          <p>Every photo is developed locally, in the moment you take it —
+            no cloud round-trip, no waiting for "enhanced" versions to
+            sync back down.</p>
+        </article>
+
+        <article class="feature-card">
+          <p class="feature-card__label">Display</p>
+          <h3>Color that holds under any light</h3>
+          <p>1,600 local dimming zones and a per-panel factory calibration
+            mean what you shot is what you see, from direct sun to a dark
+            room.</p>
+        </article>
+
+        <article class="feature-card">
+          <p class="feature-card__label">Endurance</p>
+          <h3>A full day, without dimming the truth</h3>
+          <p>Battery and brightness are tuned together, so color accuracy
+            isn't the first thing sacrificed when the charge runs low.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!--
+    TEMPORARY PLACEHOLDER (delete in Part 7)
+    Marks where the Specs section lands next.
+  -->
+  <section id="specs" class="specs section section--alt">
+    <div class="container">
+      <p class="eyebrow">The numbers</p>
+      <h2>Everything, measured.</h2>
+      <p class="specs__intro">
+        One configuration shown below — storage and color options carry
+        the same specs throughout.
+      </p>
+
+      <div class="spec-sheet">
+
+        <details class="spec-group" open>
+          <summary><span>Display</span><span class="spec-group__chevron" aria-hidden="true"></span></summary>
+          <dl class="spec-rows">
+            <div class="spec-row"><dt>Size</dt><dd>6.7", LTPO OLED</dd></div>
+            <div class="spec-row"><dt>Refresh rate</dt><dd>Adaptive, up to 120Hz</dd></div>
+            <div class="spec-row"><dt>Peak brightness</dt><dd class="spec-countup" data-value="2000" data-suffix=" nits">2,000 nits</dd></div>
+            <div class="spec-row"><dt>Dimming zones</dt><dd class="spec-countup" data-value="1600" data-suffix=" local zones">1,600 local zones</dd></div>
+          </dl>
+        </details>
+
+        <details class="spec-group">
+          <summary><span>Camera</span><span class="spec-group__chevron" aria-hidden="true"></span></summary>
+          <dl class="spec-rows">
+            <div class="spec-row"><dt>Main</dt><dd>48MP, ƒ/1.4, six-element lens</dd></div>
+            <div class="spec-row"><dt>Ultra-wide</dt><dd>12MP, 120° field of view</dd></div>
+            <div class="spec-row"><dt>Telephoto</dt><dd>12MP, 3× optical</dd></div>
+            <div class="spec-row"><dt>Processing</dt><dd>On-device neural ISP</dd></div>
+          </dl>
+        </details>
+
+        <details class="spec-group">
+          <summary><span>Chip</span><span class="spec-group__chevron" aria-hidden="true"></span></summary>
+          <dl class="spec-rows">
+            <div class="spec-row"><dt>Processor</dt><dd>Auren A2, 4nm</dd></div>
+            <div class="spec-row"><dt>Neural engine</dt><dd>32 TOPS</dd></div>
+            <div class="spec-row"><dt>RAM</dt><dd>12GB</dd></div>
+          </dl>
+        </details>
+
+        <details class="spec-group">
+          <summary><span>Battery</span><span class="spec-group__chevron" aria-hidden="true"></span></summary>
+          <dl class="spec-rows">
+            <div class="spec-row"><dt>Video playback</dt><dd class="spec-countup" data-value="28" data-prefix="Up to " data-suffix=" hours">Up to 28 hours</dd></div>
+            <div class="spec-row"><dt>Wired charging</dt><dd>30W, 50% in 25 min</dd></div>
+            <div class="spec-row"><dt>Wireless charging</dt><dd>15W</dd></div>
+          </dl>
+        </details>
+
+        <details class="spec-group">
+          <summary><span>Storage &amp; color</span><span class="spec-group__chevron" aria-hidden="true"></span></summary>
+          <dl class="spec-rows">
+            <div class="spec-row"><dt>Capacity</dt><dd>256GB / 512GB / 1TB</dd></div>
+            <div class="spec-row"><dt>Colors</dt><dd>Cloud White, Copper, Graphite</dd></div>
+          </dl>
+        </details>
+
+        <details class="spec-group">
+          <summary><span>Build</span><span class="spec-group__chevron" aria-hidden="true"></span></summary>
+          <dl class="spec-rows">
+            <div class="spec-row"><dt>Dimensions</dt><dd>147.8 × 71.2 × 7.9 mm</dd></div>
+            <div class="spec-row"><dt>Weight</dt><dd>189g</dd></div>
+            <div class="spec-row"><dt>Water resistance</dt><dd>IP68</dd></div>
+          </dl>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!--
+    TEMPORARY PLACEHOLDER (delete in Part 9)
+    Marks where the CTA + Footer land next.
+  -->
+  <section id="cta" class="cta section">
+    <div class="container cta__inner">
+      <svg class="cta__mark" width="48" height="48" aria-hidden="true"><use href="#aperture"/></svg>
+      <p class="eyebrow">Reserve yours</p>
+      <h2>Auren. $999.</h2>
+      <p class="cta__sub">
+        Ships this November. Reserve now with a fully refundable deposit —
+        pay the rest when it arrives.
+      </p>
+      <div class="cta__actions">
+        <a href="#" class="btn btn-primary">Pre-order — $999</a>
+        <a href="#specs" class="btn btn-ghost">Review specs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+
+    <div class="footer__brand">
+      <a href="#top" class="footer__logo" aria-label="Auren — home">
+        <svg width="24" height="24" aria-hidden="true"><use href="#aperture"/></svg>
+        <span>Auren</span>
+      </a>
+      <p class="footer__tagline">See more clearly.</p>
+    </div>
+
+    <nav class="footer__links" aria-label="Footer">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#cta">Pre-order</a></li>
+      </ul>
+    </nav>
+
+    <ul class="footer__social" aria-label="Social">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">X</a></li>
+      <li><a href="#">YouTube</a></li>
+    </ul>
+
+  </div>
+
+  <div class="container footer__legal">
+    <p>© 2026 Auren. A concept brand built for portfolio demonstration —
+      not a real product or company.</p>
+  </div>
+</footer>
+
+<!-- GSAP core + ScrollTrigger (CDN, no build step) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
